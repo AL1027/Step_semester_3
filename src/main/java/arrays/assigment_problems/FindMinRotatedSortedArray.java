@@ -1,9 +1,15 @@
-public class ATMPINValidator {
-    public static void checkPinLength(String pin) {
-        if (pin == null || pin.length() != 4) {
-            System.out.println("Invalid PIN — must be exactly 4 digits.");
-        } else {
-            System.out.println("PIN length OK.");
+public class FindMinRotated {
+    public int findMin(int[] nums) {
+        int left = 0, right = nums.length - 1;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] > nums[right]) {
+                left = mid + 1;      // min is in the right half
+            } else {
+                right = mid;         // min is in the left half (including mid)
+            }
         }
+        return nums[left];
     }
+}
 }
