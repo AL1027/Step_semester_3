@@ -5,6 +5,20 @@ Repository for Step Semester 3 Coursework.
 ## Date: 05-09-2026
 
 **Today's Work:**
+- Created `feature/session_4` branch from `develop`.
+- Solved Week 4 Assignment: 5 Category C array algorithms under `arrays.assigment_problems` (Product of Array Except Self, Maximum Subarray, 3Sum, Subarray Sum Equals K, Find Minimum in Rotated Sorted Array).
+
+**Next Session Plan:**
+- Implement Week 5 Assignment (Java Arrays and Methods Category C) on `feature/session_5`.
+
+**Issues Faced:**
+- None
+
+---
+
+## Date: 05-09-2026
+
+**Today's Work:**
 - Created `feature/session_2` branch from `develop`.
 - Solved Week 2 Assignment: 5 string manipulation and method logic problems under `string.assigment_problems` (ATM PIN validator, word reversal encoder, inventory CSV parser, ISBN normalizer and validator, stop-word frequency report).
 
