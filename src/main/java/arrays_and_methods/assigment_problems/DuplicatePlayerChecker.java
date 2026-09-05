@@ -1,25 +1,12 @@
 package arrays_and_methods.assigment_problems;
 
-/**
- * Problem 2: Duplicate Player Pick Checker (Easy Tier)
- *
- * Checks a submitted lineup for repeated player names using plain nested loops
- * and early-exit scanning without any Collections classes.
- */
 public class DuplicatePlayerChecker {
 
-    /**
-     * Finds the first duplicated player pick in the lineup.
-     *
-     * @param playerNames array of player name strings
-     * @return message indicating the first duplicate found, or confirmation of no duplicates
-     */
     public static String findDuplicatePick(String[] playerNames) {
         if (playerNames == null || playerNames.length <= 1) {
             return "No Duplicates Found";
         }
 
-        // Pairwise comparison using plain nested loops
         for (int i = 0; i < playerNames.length; i++) {
             if (playerNames[i] == null) {
                 continue;
