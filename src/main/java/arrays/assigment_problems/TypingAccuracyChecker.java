@@ -2,20 +2,8 @@ package arrays.assigment_problems;
 
 import java.util.Locale;
 
-/**
- * Problem 2: The Typing Speed Test Accuracy Checker
- *
- * Compares typed text against the original passage character by character,
- * computes accuracy percentage, and reports the position of the first mismatch.
- */
 public class TypingAccuracyChecker {
 
-    /**
-     * Checks typing accuracy between original text and typed text.
-     *
-     * @param original the original passage
-     * @param typed the text entered by user
-     */
     public static void checkTypingAccuracy(String original, String typed) {
         if (original == null || typed == null) {
             System.out.println("Invalid input strings");
@@ -39,7 +27,7 @@ public class TypingAccuracyChecker {
             }
         }
 
-        // If lengths differ, any missing/extra character represents a mismatch
+      
         if (firstMismatchPos == -1 && total != typed.length()) {
             firstMismatchPos = limit + 1;
             origChar = (limit < total) ? original.charAt(limit) : ' ';
