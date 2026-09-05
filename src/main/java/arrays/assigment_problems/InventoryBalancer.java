@@ -1,19 +1,7 @@
 package arrays.assigment_problems;
 
-/**
- * Problem 4: The Warehouse Inventory Balancer
- *
- * Compares total quantities across two warehouse sections and identifies the single
- * highest-quantity item across both sections.
- */
 public class InventoryBalancer {
 
-    /**
-     * Compares section totals and finds the highest quantity item.
-     *
-     * @param sectionA item quantities in Section A
-     * @param sectionB item quantities in Section B
-     */
     public static void analyzeInventory(int[] sectionA, int[] sectionB) {
         if (sectionA == null || sectionB == null || sectionA.length != sectionB.length || sectionA.length == 0) {
             System.out.println("Invalid inventory data");
@@ -24,7 +12,7 @@ public class InventoryBalancer {
         int totalB = 0;
         int maxQty = Integer.MIN_VALUE;
         String maxSection = "Section A";
-        int maxItemIndex = 1; // 1-based index (e.g., Item 3)
+        int maxItemIndex = 1; 
 
         for (int i = 0; i < sectionA.length; i++) {
             totalA += sectionA[i];
