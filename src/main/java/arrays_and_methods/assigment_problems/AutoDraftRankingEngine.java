@@ -4,17 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Problem 5: Fantasy League Auto-Draft Ranking Engine (Advanced Tier)
- *
- * Implements overloaded draft qualification rules, encapsulated Player objects,
- * and natural ordering via Comparable<Player> and Arrays.sort().
- */
 public class AutoDraftRankingEngine {
 
-    /**
-     * Encapsulated Player class implementing Comparable for natural descending ranking.
-     */
     public static class Player implements Comparable<Player> {
         private final String name;
         private final int matchesPlayed;
@@ -44,9 +35,7 @@ public class AutoDraftRankingEngine {
             return injured;
         }
 
-        /**
-         * Orders players descending by batting average (fantasy points).
-         */
+       
         @Override
         public int compareTo(Player other) {
             return Double.compare(other.battingAverage, this.battingAverage);
@@ -58,33 +47,15 @@ public class AutoDraftRankingEngine {
         }
     }
 
-    /**
-     * Overloaded draftable check for established players based on experience alone.
-     *
-     * @param matchesPlayed total matches played
-     * @return true if player qualifies on experience alone (matches >= 10)
-     */
+
     public static boolean isDraftable(int matchesPlayed) {
         return matchesPlayed >= 10;
     }
 
-    /**
-     * Overloaded draftable check for newer players based on both matches and fitness.
-     *
-     * @param matchesPlayed total matches played
-     * @param injured current injury status
-     * @return true if player qualifies on combined rule (matches >= 5 and not injured)
-     */
     public static boolean isDraftable(int matchesPlayed, boolean injured) {
         return matchesPlayed >= 5 && !injured;
     }
 
-    /**
-     * Filters draftable players, ranks them using Arrays.sort, and formats the leaderboard.
-     *
-     * @param players array of candidate players
-     * @return formatted ranking string
-     */
     public static String draftAndRank(Player[] players) {
         if (players == null || players.length == 0) {
             return "";
@@ -92,14 +63,13 @@ public class AutoDraftRankingEngine {
 
         List<Player> draftableList = new ArrayList<>();
         for (Player p : players) {
-            // Established player rule OR combined fitness-and-experience rule
             if (isDraftable(p.getMatchesPlayed()) || isDraftable(p.getMatchesPlayed(), p.isInjured())) {
                 draftableList.add(p);
             }
         }
 
         Player[] draftableArray = draftableList.toArray(new Player[0]);
-        // Built-in sort using Comparable<Player> implementation
+        
         Arrays.sort(draftableArray);
 
         StringBuilder sb = new StringBuilder();
