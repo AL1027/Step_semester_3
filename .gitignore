@@ -1,0 +1,26 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Package files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Build and IDE outputs
+bin/
+build/
+out/
+target/
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
