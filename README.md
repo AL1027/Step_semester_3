@@ -5,6 +5,20 @@ Repository for Step Semester 3 Coursework.
 ## Date: 05-09-2026
 
 **Today's Work:**
+- Created `feature/session_5` branch from `develop`.
+- Solved Week 5 Assignment: 5 Java arrays & methods problems with fantasy sports theme under `arrays_and_methods.assigment_problems` (Fantasy Score Multiplier, Duplicate Player Picker, Top Performer Tracker, Match Day Grid Analyzer, Auto-Draft Ranking Engine).
+
+**Next Session Plan:**
+- Continue with subsequent semester session projects and workflows.
+
+**Issues Faced:**
+- None
+
+---
+
+## Date: 05-09-2026
+
+**Today's Work:**
 - Created `feature/session_4` branch from `develop`.
 - Solved Week 4 Assignment: 5 Category C array algorithms under `arrays.assigment_problems` (Product of Array Except Self, Maximum Subarray, 3Sum, Subarray Sum Equals K, Find Minimum in Rotated Sorted Array).
 
